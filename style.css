@@ -24,7 +24,7 @@
 
 .sections{
     margin: 1px auto;
-    padding: 5%;
+    padding: 4% 2%;
 }
 
 textarea{
@@ -45,6 +45,8 @@ textarea{
 }
 
 .botones{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     display: flex;
     gap: 10px;
@@ -54,15 +56,22 @@ textarea{
     background-color: #0A3871;
     border: none;
     border-radius:10px ;
-    flex-basis: 50%;
     height: 40px;
+    display: none;
 }
 
 .boton-desencriptar{
     background-color: #a9a9aa;
     border: none;
     border-radius:10px ;
-    flex-basis: 50%;
+    height: 40px;
+    display: none;
+}
+
+.boton-reinicio{
+    background-color: #0A3871;
+    border: none;
+    border-radius:10px ;
     height: 40px;
 }
 
@@ -117,6 +126,12 @@ textarea{
 
 #resultado{
     display: none;
+}
+
+#msjError{
+text-align: center;
+color: red;
+display: none;
 }
 
 @media (min-width:320px) and (max-width:369px){

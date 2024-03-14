@@ -17,16 +17,18 @@
         </header>
         <form class="container-data"> 
             <section class="sections section-1">
-                <textarea name="textinfo" id="textinfo" cols="20" rows="8" placeholder="Escribe aqui lo que quieres encriptar" required onkeyup="actualizarText()"></textarea>
-                <div class="error">
+                <textarea name="textinfo" id="textinfo" cols="20" rows="8" placeholder="Escribe aqui lo que quieres encriptar" required onkeyup="actualizarText()" ></textarea>
+                <div class="error" id="error">
                     <span class="material-symbols-outlined">
                         error
                         </span>
-                    <p>Solo letras minusculas y sin acentos</p>
+                    <p>Solo letras minusculas y sin acentos</p><br>
                 </div>
+                <span id="msjError">Caracter no permitido</span>
                 <div class="botones">
                     <button class="boton-encriptar" onclick="botonEncriptar()" type="button" id="encriptar">Encriptar</button>
                     <button class="boton-desencriptar" type="button" id="desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+                    <button class="boton-reinicio" type="button" id="reinicio" onclick="botonReinicio()">Comenzar de nuevo</button>
                 </div>
             </section>
             <section class="sections section-2">

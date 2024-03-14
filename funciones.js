@@ -1,5 +1,25 @@
 let textOriginal = [];
-console.log(textOriginal)
+let reg = /^[a-zA-Z0-9\,\.\-\_\:\;\s]{1,1000}$/gi;
+
+//VALIDACION DE REGEX
+let input = document.getElementById("textinfo")
+input.addEventListener("keyup",(e) =>{
+    e.target.value.match(reg)?actualizarText():errorText()
+})
+ 
+//BLOQUEAR BOTONES Y SACAR TEXTO POR ERROR
+function errorText(){
+    document.getElementById("error").style = 'display:none';
+    document.getElementById("msjError").style = 'display:block';
+    document.getElementById("encriptar").style = 'display:none';
+    document.getElementById("desencriptar").style = 'display:none';
+}
+
+function botonReinicio(){
+    let reinicio = document.getElementById("reinicio");
+    reinicio.addEventListener("click",()=>{location.reload();});
+}
+
 //funcion que captura en tiempo real el texto de entrada del text area con funcion onkeyup
 function actualizarText(){
     let textEntrada = document.getElementById("textinfo").value;
@@ -12,6 +32,8 @@ function actualizarText(){
     let textNums = textCons2.replaceAll(/[13579]/gi,"!")
     let textNums2= textNums.replaceAll(/[2468]/gi,"?")
     //Este hace un reverse para mostrar al reves la palabra//
+    document.getElementById("encriptar").style = 'display:block';
+    document.getElementById("desencriptar").style = 'display:block';
     return textNums2.split("").reverse().join("");
     }
 
