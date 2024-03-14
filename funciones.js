@@ -1,5 +1,5 @@
 let textOriginal = [];
-let reg = /^[a-zA-Z0-9\,\.\-\_\:\;\s]{1,1000}$/gi;
+let reg = /^[a-zA-Z0-9\,\.\-\_\:\;\s\b]{1,1000}$/gi;
 
 //VALIDACION DE REGEX
 let input = document.getElementById("textinfo")
@@ -23,6 +23,8 @@ function botonReinicio(){
 //funcion que captura en tiempo real el texto de entrada del text area con funcion onkeyup
 function actualizarText(){
     let textEntrada = document.getElementById("textinfo").value;
+    document.getElementById("espera").style = 'display:none';
+    document.getElementById("resultado").style = 'display:block';
     textOriginal.push(textEntrada)
     //Esto nos ayuda por medio de regex a sustituir caracteres//
     let textVocal = textEntrada.replaceAll(/[aiu]/gi,"*");
