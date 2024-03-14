@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    background-color: black;
+    color: aliceblue;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.logo{
+    width: 7%;
+    height: 7%;
+}
+
+.container-inicial{
+    padding: 4px;
+    margin: 0px 8px;
+}
+
+.container-data{
+    display: flex;
+    justify-content:space-around;
+    gap: 2%;
+}
+
+.sections{
+    margin: 1px auto;
+    padding: 5%;
+}
+
+textarea{
+    padding: 10px;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.error{
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+}
+.error span{
+    display: flex;
+    align-items: center;
+}
+
+.botones{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.boton-encriptar{
+    background-color: #0A3871;
+    border: none;
+    border-radius:10px ;
+    flex-basis: 50%;
+    height: 40px;
+}
+
+.boton-desencriptar{
+    background-color: #a9a9aa;
+    border: none;
+    border-radius:10px ;
+    flex-basis: 50%;
+    height: 40px;
+}
+
+.boton-copiar{
+    height: 40px;
+    background-color: #a9a9aa;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 120px;
+}
+
+.section-2{
+    border: 1px solid #a9a9aa;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-1{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#parrafo-msj{
+    color: aqua;
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+    display: none;
+}
+
+#espera{
+    text-align: center;
+}
+
+#espera p{
+    padding: 15px 0px;
+    margin: 0px;
+}
+
+#espera img{
+    width: 70%;
+    height: 70%;
+}
+
+#espera p:first-of-type{
+    font-size: 28px;
+}
+
+#resultado{
+    display: none;
+}
+
+@media (min-width:320px) and (max-width:369px){
+    *{
+        font-size: 16px;
+        overflow:visible;
+    }
+    .sections{
+        padding: 5px;
+    }
+    .container-data{
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+   textarea{
+    resize:none ;
+    max-width: 200px;
+    max-height: 200px;
+   }
+   .botones{
+    flex-direction: column;
+   }
+   .boton-desencriptar,.boton-encriptar{
+    flex-basis: auto;
+   }
+   .logo{
+    width: 20%;
+    height: 20%;
+   }
+   #espera p:first-of-type{
+    font-size: 22px;
+}
+}
+
+@media (min-width:370px) and (max-width:780px) {
+    *{
+        overflow:visible;
+    }
+    .container-data{
+        display: inline;
+    }
+    .botones{
+        flex-direction: column;
+       }
+    .boton-desencriptar,.boton-encriptar{
+        flex-basis: auto;
+       } 
+    .logo{
+        width: 30%;
+        height: 30%;
+       }  
+       #espera p:first-of-type{
+        font-size: 24px;
+    }      
+}

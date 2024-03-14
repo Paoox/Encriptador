@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="icon" href="assets/logo-bn.png">
+</head>
+<body>
+    <section class="container-inicial">
+        <header>
+            <a href="javascript:location.reload()">
+            <img class="logo" src="assets/logo-divi.png" alt="logo">
+            </a>
+        </header>
+        <form class="container-data"> 
+            <section class="sections section-1">
+                <textarea name="textinfo" id="textinfo" cols="20" rows="8" placeholder="Escribe aqui lo que quieres encriptar" required onkeyup="actualizarText()"></textarea>
+                <div class="error">
+                    <span class="material-symbols-outlined">
+                        error
+                        </span>
+                    <p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <button class="boton-encriptar" onclick="botonEncriptar()" type="button" id="encriptar">Encriptar</button>
+                    <button class="boton-desencriptar" type="button" id="desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="sections section-2">
+                <div id="espera">
+                    <img src="assets/Muñeco.png" alt="dibujo espera">
+                    <p>Ningun mensaje fue encontrado</p>
+                    <p>Ingresa el texto que deseas encriptar</p>
+                </div>
+                <div id="resultado">
+                <textarea name="textencriptado" id="textencriptado" cols="20" rows="8" disabled></textarea>
+                <button class="boton-copiar" type="button" id="copiar" onclick="botonCopiar()">Copiar</button>
+                <p id="parrafo-msj">El mesaje fue copiado</p>
+                </div>
+            </section>
+        </form>
+        <script src="/funciones.js"></script>
+    </section>
+    
+</body>
+</html>
